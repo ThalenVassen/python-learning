@@ -2,7 +2,7 @@
 number = int(input("Kérlek adj meg egy számot:"))
 
 #intervallum vizsgálat
-if number >= 10 and number =< 20:
+if number >= 10 and number <= 20:
     print("A megadott szám 10 és 20 között van.")
 else:
     print("A megadott szám nincs a 10-20 közötti intervallumban.")
