@@ -89,7 +89,7 @@ else:
     print("Az eredeti lista:", all_numbers, "és ezek négyzete:", all_numbers_square)
 
 
-#Vizsgálj megegy listát, addmeg hány páros szám vanésmennyi azok összege
+#Vizsgálj megegy listát, addmeg hány páros szám van és mennyi azok összege
 all_numbers=[1,2,3,4,5,6,7,8,9,10,11,12]
 even_numbers=0
 even_numbers_sum=0
@@ -99,7 +99,52 @@ for i in all_numbers:
         even_numbers+=1
         even_numbers_sum=even_numbers_sum+i
 
-if not all_numbers:
+if even_numbers==0:
     print("Nem volt párosszám a listában.")
 else:
     print(even_numbers, "db páros számot találtam, amelyeknek az összege:", even_numbers_sum)
+
+#Vizsgálj megegy listát, addmeg hány páros szám van és melyik a legnagyobb
+all_numbers=[1,2,3,4,5,6,7,8,9,10,11,12]
+even_numbers=0
+
+for i in all_numbers:
+    if i%2==0:
+        if even_numbers == 0:
+            even_numbers_max = i
+        elif even_numbers_max<i:
+            even_numbers_max=i
+        even_numbers+=1
+if even_numbers==0:
+    print("Nem volt párosszám a listában.")
+else:
+    print(even_numbers, "db páros számot találtam, amik közül a legnagyobb:", even_numbers_max)
+
+#lista elemeit idneyelve írj ki
+all_numbers=[5,2,6,4,5,56,7,3438,9,130,11,12]
+for i in range(len(all_numbers)):
+    print(i,":", all_numbers[i])
+
+#Hány  szám nagyobb mint az előző?
+all_numbers= [1,3,2,5,4]
+more_number=0
+for i in range(1,len(all_numbers)):
+    if all_numbers[i-1]<all_numbers[i]:
+        more_number+=1
+print(more_number)
+
+#Hány  szám nagyobb mint az előző és az őt követő?
+all_numbers= [1,3,2,5,4]
+more_number=0
+for i in range(1,len(all_numbers)-1):
+    if all_numbers[i-1]<all_numbers[i]>all_numbers[i+1]:
+        more_number+=1
+print(more_number)
+
+#Hány  szám kisebb mint az előző és az őt követő?
+all_numbers= [3,1,4,2,5]
+more_number=0
+for i in range(1,len(all_numbers)-1):
+    if all_numbers[i-1]>all_numbers[i]<all_numbers[i+1]:
+        more_number+=1
+print(more_number)
