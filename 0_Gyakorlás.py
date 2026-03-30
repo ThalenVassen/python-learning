@@ -1,25 +1,29 @@
 #-----------------------------------
-#Írj egy fügvényt, ami megmondja két listáról, hogy anagramma-e.
+#Írj egy függvényt, ami kap egy listát és dict segítségével megmondja melyik szám szerepel a legtöbbször
+numbers=[1,2,2,2]
 
-numbers1 = [1,2,3]
-numbers2 = [3,2,2]
+def most_frequent(numbers):
+    max_value = 0
+    max_key=None
+    count={}
+    dontetlen =False
+    for i in numbers:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+    for key,value in count.items():
+        if value == max_value:
+            dontetlen =True
+        elif value > max_value:
+            max_value=value
+            max_key = key
+            dontetlen =False
+    if dontetlen:
+        return None
+    else:
+        return max_key
 
-def anagramma(numbers1, numbers2):
-    if not numbers1 or not numbers2 or len(numbers1)!=len(numbers2):
-        return False
-    for i in numbers1:
-        numbers1_i_count = 0
-        for n in numbers1:
-            if i ==n:
-                numbers1_i_count+=1
-        numbers2_m_count = 0
-        for m in numbers2:
-            if i ==m:
-                numbers2_m_count+=1
-        if numbers1_i_count!=numbers2_m_count:
-            return False
-    return True
+max_key=most_frequent(numbers)
 
-numbers_anagramma=anagramma(numbers1,numbers2)
-
-print(numbers_anagramma)
+print(max_key)
