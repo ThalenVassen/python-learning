@@ -152,3 +152,19 @@ def target_mark(numbers,target):
 target_key=target_mark(numbers,target)
 
 print(target_key)
+
+#-----------------------------------
+#Írj egy függvényt, ami kap egy listát és megmondja van-e benne ismétlés
+numbers=[1,2,1,4]
+
+def recurrence_mark(numbers):
+    count={}
+    for i in numbers:
+        count[i]=count.get(i,0)+1
+        if count[i]>1:
+            return True
+    return False
+
+recurrence=recurrence_mark(numbers)
+
+print(recurrence)
