@@ -168,3 +168,14 @@ def recurrence_mark(numbers):
 recurrence=recurrence_mark(numbers)
 
 print(recurrence)
+
+#-----------------------------------
+#Írj egy függvényt, ami kap egy listát és megmondja van-e benne ismétlés SET
+numbers=[1,2,3,4]
+
+def recurrence_mark(numbers):
+    return len(numbers)!=len(set(numbers))
+
+recurrence=recurrence_mark(numbers)
+
+print(recurrence)
