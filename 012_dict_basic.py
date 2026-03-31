@@ -132,3 +132,23 @@ def most_frequent(numbers):
 max_key=most_frequent(numbers)
 
 print(max_key)
+
+#-----------------------------------
+#Írj egy függvényt, ami kap egy listát és megmondja melyik fordul elő egyszer
+numbers=[1,2,1,3,2,4]
+target=1
+
+def target_mark(numbers,target):
+    target_key=[]
+    count={}
+    for i in numbers:
+        count[i]=count.get(i,0)+1
+    for key,value in count.items():
+        if value == target:
+            target_key.append(key)
+
+    return target_key
+
+target_key=target_mark(numbers,target)
+
+print(target_key)
