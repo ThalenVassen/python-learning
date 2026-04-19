@@ -57,3 +57,34 @@ numbers = [-3, -1, 0, 2, -5]
 result = [i if i>=0 else i*(-1) for i in numbers]
 
 print(result)
+
+#-------------------------------
+# Lista comprehension alapok
+# Írj egy lista comprehensiont:
+#   1) ami a számokból csak azokat tartja meg, amelyeknek a négyzete nagyobb mint 10
+
+numbers = [1,2,3,4,5]
+
+result = [i for i in numbers if i*i>10 ]
+
+print(result)
+
+#-------------------------------
+# Lista comprehension alapok
+# Írj egy lista comprehensiont:
+#   1) ami minden számot stringgé alakít
+numbers = [1,2,3,4,5]
+result = [str(i) for i in numbers]
+
+print(result)
+
+#-------------------------------
+# Lista comprehension alapok
+# Írj egy lista comprehensiont:
+#   1) ami csak azokat a számokat tartja meg, amelyek párosak, és stringgé alakítja őket
+
+numbers = [1,2,3,4,5,6]
+
+result = [str(i) for i in numbers if i%2==0]
+
+print(result)
